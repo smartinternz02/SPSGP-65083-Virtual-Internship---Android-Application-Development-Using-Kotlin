@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    android:backgroundTint="@color/secondary_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Item_Name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Item Name"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/primary_color"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:id="@+id/Item_Quantity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Item Quantity"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/primary_color"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:id="@+id/Item_Price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Item Price"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/primary_color"
+                android:layout_margin="3dp"/>
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/Item_Delete"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight=".5"-->
+<!--                android:layout_margin="3dp"-->
+<!--                android:gravity="center"-->
+<!--                android:src="@drawable/grocery_delete"-->
+<!--                android:background="@color/secondary_color"-->
+<!--                app:tint="@color/primary_color"/>-->
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/secondary_color"
+            android:text="Add items to cart"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/textview">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EdittextTheme"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:hint="Enter Item Name"
+                app:hintTextColor="@color/secondary_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Item_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:textColor="@color/secondary_color"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EdittextTheme"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:hint="Enter Item Quantity"
+                app:hintTextColor="@color/secondary_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Item_Quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:inputType="phone"
+                    android:textColor="@color/secondary_color"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EdittextTheme"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:hint="Enter Item Price"
+                app:hintTextColor="@color/secondary_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Item_Price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:inputType="phone"
+                    android:textColor="@color/secondary_color"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:text="cancel"
+                    android:textColor="@color/primary_color"
+                    android:backgroundTint="@color/secondary_color"
+                    android:textSize="15sp" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/save"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:text="save"
+                    android:textColor="@color/primary_color"
+                    android:backgroundTint="@color/secondary_color"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

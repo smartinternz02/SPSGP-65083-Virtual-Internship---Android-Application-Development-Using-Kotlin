@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/primary_color">
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/app_bar_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:id="@+id/app_bar"-->
+<!--            style="@style/Widget.MaterialComponents.Toolbar.Primary"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:backgroundTint="@color/secondary_color"-->
+<!--            app:title="Grocery App"-->
+<!--            app:titleTextColor="@color/primary_color">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="120dp">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/Total_cost"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:layout_constraintRight_toRightOf="parent"-->
+<!--                    app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:text="Total Cost"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="@color/primary_color"-->
+<!--                    android:textSize="20sp" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        </com.google.android.material.appbar.MaterialToolbar>-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<!--        android:layout_below="@id/app_bar_layout">-->
+    <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Item_Name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Item Name"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:textColor="@color/secondary_color"
+            android:layout_margin="3dp"/>
+        <TextView
+            android:id="@+id/Item_Quantity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Item Quantity"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="@color/secondary_color"
+            android:layout_margin="3dp"/>
+        <TextView
+            android:id="@+id/Item_Price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Item Price"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="@color/secondary_color"
+            android:layout_margin="3dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Grocery_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/relative"
+        android:layout_alignParentBottom="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_grocery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:elevation="5dp"
+        android:src="@drawable/grocery_add"
+        android:contentDescription="for adding grocery to the list" />
+</RelativeLayout>

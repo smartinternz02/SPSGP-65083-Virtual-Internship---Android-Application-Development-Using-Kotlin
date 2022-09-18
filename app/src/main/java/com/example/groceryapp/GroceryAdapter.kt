@@ -2,11 +2,20 @@ package com.example.groceryapp
 
 import android.view.*
 import android.widget.TextView
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import androidx.fragment.app.FragmentActivity
+
+
+
 
 class GroceryAdapter(var list: List<GroceryItems>, val viewModel: GroceryViewModel) :
     RecyclerView.Adapter<GroceryAdapter.GroceryViewHolder>(){
     private lateinit var actionmode: ActionMode
+    private var isEnable=false
+    private var isSelectAll=false
+    var selectList: List<GroceryItems> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GroceryViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.grocery_item, parent, false)
         return GroceryViewHolder(view)
@@ -23,7 +32,7 @@ class GroceryAdapter(var list: List<GroceryItems>, val viewModel: GroceryViewMod
         holder.itemView.setOnLongClickListener {
             val i=gettingposition(position)
             actionmode = it.startActionMode(i)
-            actionmode.title = "1 selected"
+            actionmode.title = "selected"
             return@setOnLongClickListener true
         }
     }

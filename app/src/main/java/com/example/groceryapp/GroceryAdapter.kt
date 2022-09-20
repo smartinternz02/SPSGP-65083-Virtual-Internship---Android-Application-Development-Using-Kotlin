@@ -2,20 +2,12 @@ package com.example.groceryapp
 
 import android.view.*
 import android.widget.TextView
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import androidx.fragment.app.FragmentActivity
 
 
-
-
-class GroceryAdapter(var list: List<GroceryItems>, val viewModel: GroceryViewModel) :
+class GroceryAdapter(var list: ArrayList<GroceryItems>, val viewModel: GroceryViewModel) :
     RecyclerView.Adapter<GroceryAdapter.GroceryViewHolder>(){
     private lateinit var actionmode: ActionMode
-    private var isEnable=false
-    private var isSelectAll=false
-    var selectList: List<GroceryItems> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GroceryViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.grocery_item, parent, false)
         return GroceryViewHolder(view)
@@ -37,7 +29,7 @@ class GroceryAdapter(var list: List<GroceryItems>, val viewModel: GroceryViewMod
         }
     }
 
-    private fun gettingposition(position: Int):ActionMode.Callback {
+    private fun gettingposition(position: Int): ActionMode.Callback {
         val callback = object : ActionMode.Callback{
 
             override fun onCreateActionMode(mode: ActionMode?, menu: Menu?): Boolean {
@@ -64,11 +56,10 @@ class GroceryAdapter(var list: List<GroceryItems>, val viewModel: GroceryViewMod
         }
         return callback
     }
+
     inner class GroceryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var ItemName: TextView = itemView.findViewById(R.id.Item_Name)
         var ItemPrice: TextView = itemView.findViewById(R.id.Item_Price)
         var ItemQuantity: TextView = itemView.findViewById(R.id.Item_Quantity)
     }
-
-
 }

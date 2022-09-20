@@ -12,7 +12,6 @@ class GroceryViewModel (private val repository: GroceryRepository) : ViewModel()
     fun delete(item: GroceryItems) = GlobalScope.launch {
         repository.delete(item)
     }
-
     fun allGroceryItems() = repository.allGroceryItems()
 
 }

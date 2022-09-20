@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#283a4a")))
         setContentView(R.layout.activity_main)
         GroceryRV=findViewById(R.id.Grocery_items)
         AddGroceryItem=findViewById(R.id.add_grocery)

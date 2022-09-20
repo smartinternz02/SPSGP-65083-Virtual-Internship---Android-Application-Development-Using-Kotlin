@@ -19,8 +19,8 @@ class GroceryAdapter(var list: ArrayList<GroceryItems>, val viewModel: GroceryVi
     override fun onBindViewHolder(holder: GroceryViewHolder, position: Int) {
         val currentPosition = list[position]
         holder.ItemName.text = currentPosition.itemName
-        holder.ItemPrice.text = currentPosition.itemPrice.toString()
-        holder.ItemQuantity.text = currentPosition.itemQuantity.toString()
+        holder.ItemPrice.text = "Rs. "+currentPosition.itemPrice.toString()
+        holder.ItemQuantity.text = currentPosition.itemQuantity.toString()+" Kg"
         holder.itemView.setOnLongClickListener {
             val i=gettingposition(position)
             actionmode = it.startActionMode(i)

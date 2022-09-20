@@ -54,7 +54,7 @@
                 style="@style/EdittextTheme"
                 android:layout_margin="5dp"
                 android:padding="5dp"
-                android:hint="Enter Item Quantity">
+                android:hint="Enter Item Quantity in Kg">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Item_Quantity"
@@ -73,7 +73,7 @@
                 style="@style/EdittextTheme"
                 android:layout_margin="5dp"
                 android:padding="5dp"
-                android:hint="Enter Item Price">
+                android:hint="Enter Item Price in Rs">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Item_Price"
